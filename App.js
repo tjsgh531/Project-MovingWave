@@ -10,12 +10,14 @@ class App{
 
         this.wave = new Wave();
 
+       
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
         requestAnimationFrame(this.animate.bind(this));
     }
 
     resize(){
+        console.log(this);
         this.stageWidth = document.body.clientWidth;
         this.stageHeight = document.body.clientHeight;
         
