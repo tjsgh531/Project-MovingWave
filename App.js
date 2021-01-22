@@ -15,7 +15,7 @@ class App{
             this.stageWidth,
             this.stageHeight,
             document.body.clientWidth / 2,
-            document.body.clientHeight /2,
+            document.body.clientHeight / 2,
             30,);
         this.upadate();
     }
