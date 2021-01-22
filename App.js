@@ -1,6 +1,6 @@
 import{
-    PointMove
-}from './PointMove.js';
+    Wave
+}from './Wave.js';
 
 class App{
     constructor(){
@@ -8,7 +8,7 @@ class App{
         this.ctx = this.canvas.getContext('2d');
         document.body.appendChild(this.canvas);
 
-        this.pointMove = new PointMove();
+        this.Wave = new Wave();
 
         window.addEventListener('resize',this.resize.bind(this));
         this.resize();
@@ -22,13 +22,13 @@ class App{
         this.canvas.width = this.stageWidth;
         this.canvas.height = this.stageHeight;
 
-        this.pointMove.resize(this.stageWidth, this.stageHeight);
+        this.Wave.resize();
+
     }
 
     upadate(){
         this.ctx.clearRect(0,0,this.stageWidth,this.stageHeight);
-        this.pointMove.draw(this.ctx);
-
+        this.Wave.draw(this.ctx);
         requestAnimationFrame(this.upadate.bind(this));
     }
 }
