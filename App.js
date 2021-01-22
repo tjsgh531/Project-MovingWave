@@ -11,12 +11,7 @@ class App{
         window.addEventListener('resize',this.resize.bind(this));
         this.resize();
 
-        this.pointMove = new PointMove(
-            this.stageWidth,
-            this.stageHeight,
-            document.body.clientWidth / 2,
-            document.body.clientHeight / 2,
-            30,);
+        this.pointMove = new PointMove(this.stageWidth,this.stageHeight);
         this.upadate();
     }
 
@@ -26,6 +21,8 @@ class App{
 
         this.canvas.width = this.stageWidth;
         this.canvas.height = this.stageHeight;
+
+        this.pointMove.resize(this.stageWidth, this.stageHeight);
     }
 
     upadate(){

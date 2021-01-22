@@ -1,20 +1,16 @@
 export class PointMove{
-    constructor(stageWidth, stageHeight){
-        this.stageWidth = stageWidth;
-        this.stageHeight = stageHeight;
-
-    
+    constructor(stageWidth,stageHeight){
         this.speed = 0.1;
         this.currentValue = 0;
         this.fluctuation = 150;
         this.radius =30;
 
-        this.resize();
+        this.resize(stageWidth,stageHeight);
     }
 
-    resize(){
-        this.startX = this.stageWidth /2;
-        this.initY = this.stageHeight /2
+    resize(stageWidth,stageHeight){
+        this.startX = stageWidth /2;
+        this.initY = stageHeight /2;
     }
 
     draw(ctx){
