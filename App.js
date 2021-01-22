@@ -8,10 +8,10 @@ class App{
         this.ctx = this.canvas.getContext('2d');
         document.body.appendChild(this.canvas);
 
+        this.pointMove = new PointMove();
+
         window.addEventListener('resize',this.resize.bind(this));
         this.resize();
-
-        this.pointMove = new PointMove(this.stageWidth,this.stageHeight);
         this.upadate();
     }
 
