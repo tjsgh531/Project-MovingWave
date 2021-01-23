@@ -44,14 +44,24 @@ export class Wave{
         }
  
         /*포인트 찍은곳 연결하기 */
+        
         ctx.moveTo(this.Points[0].x,this.Points[0].y);
+        let prevX = this.Points[0].x;
+        let prevY = this.Points[0].y;
         for(let i = 1; i < this.totalPoints;i++){
-            ctx.lineTo(this.Points[i].x,this.Points[i].y);
+            let cx = (prevX + this.Points[i].x) /2 ;
+            let cy = (prevY + this.Points[i].y) /2 ;
+            console.log(`cx : ${cx} / cy : ${cy}`);
+            ctx.arc(cx,cy,10,0,2*Math.PI);
+            ctx.quadraticCurveTo(cx,cy,this.Points[i].x,this.Points[i].y);
+            prevX = this.Points[i].x;
+            prevY = this.Points[i].y;
         }
+
         ctx.lineTo(this.Points[this.totalPoints-1].x,this.stageHeight);
         ctx.lineTo(this.Points[0].x,this.stageHeight);
         ctx.lineTo(this.Points[0].x,this.Points[0].y);
-        ctx.fill();
+        ctx.stroke();
         ctx.closePath();
     }
 }
