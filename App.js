@@ -22,14 +22,14 @@ class App{
         this.canvas.width = this.stageWidth;
         this.canvas.height = this.stageHeight;
 
-        this.Wave.resize();
-
+        this.Wave.resize(this.stageWidth,this.stageHeight);
     }
 
     upadate(){
         this.ctx.clearRect(0,0,this.stageWidth,this.stageHeight);
         this.Wave.draw(this.ctx);
-        requestAnimationFrame(this.upadate.bind(this));
+        //requestAnimationFrame(this.upadate.bind(this));
+       
     }
 }
 
