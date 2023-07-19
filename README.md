@@ -8,3 +8,4 @@ this.speed = 0.01;
 ```
 
 - canvas를 이용한 동적인 애니메이션 제작
+![화면 캡처 2023-07-19 183022](https://github.com/tjsgh531/Project-MovingWave/assets/60285169/b8c93bc1-54bb-4c63-b321-f26328fb1743)
