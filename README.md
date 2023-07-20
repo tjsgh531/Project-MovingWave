@@ -2,6 +2,11 @@
 
 [출처: Interactive Developer](https://youtu.be/hCHL7sydzn0)
 
+### 기술 스택
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
 Point.js 파일안에 this.speed 값을 변경하면 물결의 스피드를 조절 할 수 있습니다.
 ```js
 this.speed = 0.01;
